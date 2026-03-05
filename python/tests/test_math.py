@@ -1,7 +1,7 @@
 """Tests for math_utils module."""
 import pytest
 
-from python.math_utils import add, subtract, multiply, divide, factorial
+from python.math_utils import add, subtract, multiply, divide, divide_numbers, factorial
 
 
 class TestAdd:
@@ -44,6 +44,17 @@ class TestDivide:
     def test_divide_by_zero(self):
         with pytest.raises(ZeroDivisionError):
             divide(1, 0)
+
+
+class TestDivideNumbers:
+    def test_basic(self):
+        assert divide_numbers(10, 2) == 5.0
+
+    def test_float_result(self):
+        assert divide_numbers(7, 2) == 3.5
+
+    def test_divide_by_zero(self):
+        assert divide_numbers(1, 0) == float('inf')
 
 
 class TestFactorial:

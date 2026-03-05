@@ -27,6 +27,17 @@ def divide(a: int | float, b: int | float) -> float:
     return a / b
 
 
+def divide_numbers(a: int | float, b: int | float) -> float:
+    """Return the quotient of two numbers, handling division by zero.
+
+    Returns:
+        float: The quotient of a and b, or float('inf') if b is zero.
+    """
+    if b == 0:
+        return float('inf')
+    return a / b
+
+
 def factorial(n: int) -> int:
     """Return the factorial of a non-negative integer.
 
