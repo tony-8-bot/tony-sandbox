@@ -5,16 +5,13 @@ def add(a: int | float, b: int | float) -> int | float:
     """Return the sum of two numbers."""
     return a + b
 
-
 def subtract(a: int | float, b: int | float) -> int | float:
     """Return the difference of two numbers."""
     return a - b
 
-
 def multiply(a: int | float, b: int | float) -> int | float:
     """Return the product of two numbers."""
     return a * b
-
 
 def divide(a: int | float, b: int | float) -> float:
     """Return the quotient of two numbers.
@@ -25,7 +22,6 @@ def divide(a: int | float, b: int | float) -> float:
     if b == 0:
         raise ZeroDivisionError("Cannot divide by zero")
     return a / b
-
 
 def factorial(n: int) -> int:
     """Return the factorial of a non-negative integer.
@@ -41,3 +37,7 @@ def factorial(n: int) -> int:
     for i in range(2, n + 1):
         result *= i
     return result
+
+def power(base: int | float, exponent: int) -> int | float:
+    """Return the base raised to the power of exponent."""
+    return base ** exponent
